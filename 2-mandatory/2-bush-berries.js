@@ -21,7 +21,37 @@
   Let's first look at an example that will teach you how to use these methods.
 */
 
-function bushChecker() {}
+//*************************************arrow function
+
+// function bushChecker(arr) {
+//   if (arr.every(item => item === "pink")){
+//     return 'Bush is safe to eat from'
+//   }
+//   return 'Toxic! Leave bush alone!'
+// }
+
+// ************************************function
+
+// function filter(item) {
+//   let value = item === "pink"
+//   return value
+// }
+
+// function bushChecker(arr) {
+//   if (arr.every(filter)){
+//     return 'Bush is safe to eat from'
+//   }
+//   return 'Toxic! Leave bush alone!'
+// }
+
+//***************************************Anonymouse function
+
+function bushChecker(arr) {
+  if (arr.every(function (item) { return item === "pink" })) {
+    return 'Bush is safe to eat from'
+  }
+  return 'Toxic! Leave bush alone!'
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
@@ -50,7 +80,7 @@ test(
 );
 
 test(
-  "bushChecker funtion works - case 1",
+  "bushChecker funtion works - case 2",
   bushChecker(bushBerryColours2),
   "Bush is safe to eat from"
 );

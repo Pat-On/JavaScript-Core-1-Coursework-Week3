@@ -11,7 +11,19 @@
     Some string methods that might help you here are .replace() and .substring(). 
 */
 
-function safeLevels() {}
+function safeLevels(arr) {
+  let arrModified = [];
+  for (let i = 0; i < arr.length; i++){
+    arrModified[i] = parseFloat(arr[i].slice(0, arr[i].length - 1));
+    
+    if (23.5 > arrModified[i] && arrModified[i] > 19.5){
+      return arr[i];
+  }
+  }
+
+  console.log(arrModified)
+
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
